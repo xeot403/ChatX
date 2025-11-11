@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>chatX</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <header class="brand">
+                <h1>chatX</h1>
+            </header>
+            <div class="contacts">
+                <div id="onlineList" class="online-list">
+                    <div class="no-contacts">Start a new chat by entering an email after login</div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="chat-area">
+            <div class="topbar">
+                <div class="user-info">Not logged in</div>
+                <div class="search-wrapper">
+                    <input id="memberSearch" class="member-search" type="search"
+                        placeholder="Search online members by email" />
+                </div>
+            </div>
+
+            <div id="messages" class="messages"></div>
+
+            <form id="composer" class="composer">
+                <input id="messageInput" type="text" placeholder="Type a message" autocomplete="off" />
+                <button id="sendBtn" type="submit">Send</button>
+            </form>
+        </main>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-card">
+            <h2>Welcome to chatX</h2>
+            <div id="loginForm" class="auth-form active">
+                <h3>Login</h3>
+                <input id="loginEmail" type="email" placeholder="you@example.com" />
+                <input id="loginPassword" type="password" placeholder="Password" />
+                <button id="loginBtn">Login</button>
+                <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+            </div>
+            <div id="registerForm" class="auth-form">
+                <h3>Register</h3>
+                <input id="regEmail" type="email" placeholder="you@example.com" />
+                <input id="regPassword" type="password" placeholder="Password" />
+                <input id="regDisplayName" type="text" placeholder="Display name (optional)" />
+                <button id="registerBtn">Register</button>
+                <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
